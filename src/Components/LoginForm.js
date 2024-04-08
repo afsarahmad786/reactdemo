@@ -39,7 +39,7 @@ const LoginForm = () => {
         setPassword("");
         setSuccessMessage("Login successful! Redirecting to welcome page...");
         setTimeout(() => {
-          navigate("/welcome");
+          navigate("/");
         }, 3000);
       } else {
         setErrorMessage("Invalid email or password");
