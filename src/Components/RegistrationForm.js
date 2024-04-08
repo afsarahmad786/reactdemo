@@ -44,9 +44,28 @@ const RegistrationForm = () => {
     } else if (!state && touchedState && state.trim() === "") {
       setErrorMessage("State is required");
     } else {
-      // Your other validation logic here
+      // Construct a user object with all form values
+      const newUser = {
+        email,
+        password,
+        phone,
+        address,
+        pincode,
+        city,
+        state,
+      };
 
-      // Redirect to login page upon successful registration
+      // Log all form values to console
+      console.log(newUser);
+
+      // Reset all form fields to empty strings
+      setEmail("");
+      setPassword("");
+      setPhone("");
+      setAddress("");
+      setPincode("");
+      setCity("");
+      setState("");
       setSuccessMessage(
         "Registration successful! Redirecting to login page..."
       );
